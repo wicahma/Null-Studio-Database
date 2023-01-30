@@ -19,9 +19,6 @@ app.use(
       "https://nullstudio.id",
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-    allowedHeaders:
-      "Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Credentials",
   })
 );
 app.use(express.urlencoded({ extended: false }));
