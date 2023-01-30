@@ -12,7 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "https://nullstudio.vercel.app/",
+      "https://null-studio-web-diama.vercel.app/",
+      "https://null-studio-web-git-main-diama.vercel.app/",
+      "https://nullstudio.id/",
+    ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
