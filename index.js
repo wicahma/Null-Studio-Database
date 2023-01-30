@@ -20,8 +20,8 @@ app.use(
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
-    headers:
-      "Content-Type,Authorization ,Accept,Origin,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Credentials",
+    allowedHeaders:
+      "Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Credentials",
   })
 );
 app.use(express.urlencoded({ extended: false }));
