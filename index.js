@@ -1,13 +1,13 @@
 require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 const errorHandler = require("./src/middlewares/errorHandler");
 const DB_Connect = require("./src/configs/database");
-const cors = require("cors");
 const PORT = process.env.PORT || 4000;
 
-DB_Connect();
-
 const app = express();
+
+DB_Connect();
 
 app.use(express.json());
 app.use(
@@ -20,6 +20,8 @@ app.use(
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
+    headers:
+      "Content-Type,Authorization ,Accept,Origin,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Credentials",
   })
 );
 app.use(express.urlencoded({ extended: false }));
